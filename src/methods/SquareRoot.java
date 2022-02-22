@@ -21,6 +21,5 @@ public class SquareRoot implements Calculation{
             a = (a + b) / 2;
             b = this.root / a;
         }
-        System.out.println(a);
     }
 }
