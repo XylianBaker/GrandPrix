@@ -2,7 +2,7 @@ package methods;
 
 public class Fibonacci implements Calculation{
     // Declaring a private variable called `precision` that is of type `long`.
-    private long precision;
+    private final long precision;
 
     // This is a constructor that takes a long as an argument and sets the precision to that value.
     public Fibonacci(long n) {
