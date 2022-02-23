@@ -1,14 +1,6 @@
 package methods;
 
-public class Pi implements Calculation{
-    // A private variable that is used to store the value of the point of pi.
-    private int pointOfPi;
-
-    // This is the constructor of the class. It is used to initialize the value of the point of pi.
-    public Pi(int pointOfPi) {
-        this.pointOfPi = pointOfPi;
-    }
-
+public record Pi(int iterations) implements Calculation {
     /**
      * A method that is used to calculate the value of pi.
      */
@@ -16,9 +8,10 @@ public class Pi implements Calculation{
     public void execute() {
         double pi = 0;
         double s = 1;
+        final int end = iterations * 2 + 1;
 
-        for (int i = 0; i < pointOfPi; i+=2) {
-            pi += s/i;
+        for (int i = 1; i < end; i += 2) {
+            pi += s / i;
             s = -s;
         }
     }
